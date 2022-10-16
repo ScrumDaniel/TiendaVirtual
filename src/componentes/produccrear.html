@@ -1,0 +1,173 @@
+<div class="page-header pt-3">
+  <h3><i class="fas fa-plus fa-fw"></i> Agregar Productos</h3>
+</div>
+
+<div class="row col-md-12 mt-4">
+  <div class="d-flex justify-content-center">
+    <ul class="list-group list-group-horizontal-sm">
+      <li class="list-group-item active">
+        <i class="fas fa-plus fa-fw"></i> Agregar
+      </li>
+      <a href="#prodlist" style="text-decoration: none">
+        <li class="list-group-item">
+          <i class="fa-solid fa-list fa-fw"></i> Lista
+        </li>
+      </a>
+      <a href="#prodadmin" style="text-decoration: none">
+        <li class="list-group-item">
+          <i class="fa-solid fa-unlock-keyhole fa-fw"></i> Administrar
+        </li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-md-12 mt-4">
+      <div class="card">
+        <h5 class="card-title">* Datos requeridos</h5>
+        <form
+          action="javascript:crearProducto();"
+          id="formaProdCrear"
+          class="validarFormulario"
+          novalidate
+        >
+          <div class="card-body">
+            <div class="row text-light text-start rounded pb-3">
+              <div class="col-4 form-floating">
+                <select
+                  class="form-select"
+                  id="catePro"
+                  required
+                  style="background-image: none"
+                >
+                  <option value="" selected>seleccione categoria</option>
+                </select>
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Categoria
+                </label>
+              </div>
+              <div class="col-5 form-floating">
+                <select
+                  class="form-select"
+                  id="proveePro"
+                  required
+                  style="background-image: none"
+                >
+                  <option value="" selected>seleccione proveedor</option>
+                </select>
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Proveedor
+                </label>
+              </div>
+              <div class="col-3 form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="nom3"
+                  required
+                  placeholder="place"
+                  style="background-image: none"
+                />
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Cantidad
+                </label>
+              </div>
+            </div>
+
+            <div class="row mt-4 text-light text-start rounded pb-3">
+              <div class="col-6 form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nom2"
+                  required
+                  placeholder="place"
+                  style="background-image: none"
+                />
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Nombre del producto</label
+                >
+              </div>
+              <div class="col form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="nom4"
+                  required
+                  placeholder="place"
+                  style="background-image: none"
+                />
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Precio</label
+                >
+              </div>
+            </div>
+            <div class="text-dark text-start rounded mt-3">
+              <label for="fot" class="form-label" style="margin-bottom: 2px"
+                >&nbsp;Foto del Producto</label
+              >
+              <input
+                type="file"
+                class="form-control form-control-sm mt-2"
+                id="fot"
+                accept="image/*"
+                onchange="mostrarProducto(event);"
+              />
+            </div>
+
+            <div class="text-light text-start rounded mt-3">
+              <div class="d-flex justify-content-center">
+                <img
+                  id="fotProductoYa"
+                  src="src/assets/images/noFoto.png"
+                  class="maximoInterprete"
+                  alt="No foto"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center card-footer">
+            <button type="submit" class="btn btn-success">
+              Crear producto
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-md-6 mt-4">
+      <div
+        class="alert alert-primary alert-dismissible fade show"
+        role="alert"
+        id="prodMsgOk"
+        style="display: none"
+      >
+        El Producto <strong>fue creado</strong> correctamente
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+        id="prodMsgError"
+        style="display: none"
+      >
+        El Producto <strong>NO fue creado</strong> en la base de datos
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
+</div>

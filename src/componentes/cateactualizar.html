@@ -1,0 +1,82 @@
+<div class="page-header pt-3">
+    <h3><i class="fas fa-plus fa-fw"></i> Actualizar categoría</h3>
+</div>
+
+<div class="row col-md-12 mt-4">
+    <div class="d-flex justify-content-center">
+        <ul class="list-group list-group-horizontal-sm">
+            <a href="#addcatego" style="text-decoration: none;">
+                <li class="list-group-item"><i class="fas fa-plus fa-fw"></i> Agregar</li>
+            </a>
+            <a href="#catelist" style="text-decoration: none;">
+                <li class="list-group-item"><i class="fa-solid fa-list fa-fw"></i> Lista</li>
+            </a>
+            <a href="#cateadmin" style="text-decoration: none;">
+                <li class="list-group-item active"><i class="fa-solid fa-unlock-keyhole fa-fw"></i> Administrar</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">* Datos requeridos</h5>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-5">
+                        <div class="mt-4">
+                            <form action="javascript:actualizarCate();" id="formaCateActualizar"
+                                class="validarFormulario" novalidate>
+                                <input type="hidden" class="form-control" id="cod" required />
+                                <div>
+
+                                    <div class="mb-3">
+                                        <div class="col form-floating">
+                                            <input type="text" class="form-control" id="nom" required
+                                                placeholder="place" style="background-image: none;" />
+                                            <label for="usu" style="color: #00000042; padding: 0.6rem;">
+                                                Nombre de la categoría</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="col form-floating">
+                                            <select class="form-select" id="est">
+                                                <option value="1">Activa</option>
+                                                <option value="2">Inactiva</option>
+                                              </select>
+                                            <label for="usu" style="color: #00000042; padding: 0.6rem;">
+                                                Estado de la categoría</label>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Actualizar categoría</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+
+        <div class="col-md-6 mt-4">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert" id="cateMsgOk"
+                style="display: none;">
+                La categoría <strong>fue actualizada</strong> correctamente
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="cateMsgError"
+                style="display: none;">
+                La categoría <strong>NO fue actualizada</strong> en la base de datos
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

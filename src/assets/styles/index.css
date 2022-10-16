@@ -1,0 +1,192 @@
+/*
+body {
+  overflow-x: hidden;
+}
+*/
+:root {
+  --color-one: #f5f5f5;
+  --color-two: #24292e;
+  --color-three: #ec5252;
+  --color-four:rgb(35, 16, 201)2;
+  /*--color-three: #0366D6;*/
+
+  --form-color: #14111a;
+
+  --accent-color: #253556;
+  /*--accent-color: #455A64;*/
+  --border-color: #d8d8d8;
+}
+
+.productos{
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-column-start: 2;
+  gap:16px;
+
+}
+
+.maximoInterprete{
+  max-width: 200px;
+  height: auto;
+}
+
+.fotoCatalogo{
+  max-width: 200px;
+  height: auto;
+}
+
+.miniaturaAlbum{
+  max-width: 70px;
+  height: auto;
+}
+
+.resaltar:hover {
+  color: #b63b4b;
+  border: 2px solid #b63b4b;
+}
+
+.check-amarillo {
+  color: #fed93e;
+}
+
+.check-rojo {
+  color: #82140e;
+}
+
+.check-verde {
+  color: #1d7612;
+}
+
+.form-acceso input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-acceso input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.custom-file-control,
+.form-control,
+.is-focused .custom-file-control,
+.is-focused .form-control {
+  background-image: linear-gradient(0deg, #f0bdc1 2px, rgba(0, 150, 136, 0) 0),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*----------  Home Styles  ----------*/
+.tile-container {
+  text-align: center;
+  padding: 20px 25px;
+}
+.tile {
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+}
+.tile:hover {
+  text-decoration: none;
+  border-color: var(--color-three);
+}
+.tile:focus,
+.tile:active {
+  outline: none;
+}
+.tile-tittle {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease-in-out;
+  font-family: "roboto_medium_regular";
+}
+.tile:hover .tile-tittle {
+  color: #fff;
+  border-color: var(--color-three);
+  background-color: var(--color-three);
+}
+.tile-icon {
+  width: 100%;
+  height: 160px;
+  box-sizing: border-box;
+  padding-top: 22px;
+}
+.tile-icon > i {
+  font-size: 80px;
+}
+.tile-icon > p {
+  font-family: "roboto_medium_regular";
+  height: 35px;
+  line-height: 35px;
+}
+.tile:hover .tile-icon > i,
+.tile:hover .tile-icon > p {
+  color: var(--color-three);
+}
+
+.table .btn {
+  margin-bottom: 0;
+}
+.table thead th {
+  color: rgb(233, 233, 233);
+}
+.table tbody tr {
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+.table-dark,
+.table {
+  background-color: rgb(255, 255, 255);
+}
+.table-dark {
+  border: 1px solid var(--accent-color);
+}
+.table-dark thead tr {
+  background-color: var(--accent-color);
+}
+.table-dark td,
+.table-dark thead th,
+.table-dark th {
+  border: none;
+}
+.table-light tr:hover {
+  color:rgb(35, 16, 201);
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(235, 20, 120, 0.829) 85%,
+    transparent
+  );
+}

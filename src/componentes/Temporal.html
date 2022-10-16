@@ -1,0 +1,157 @@
+<div class="row col-md-12">
+  <div class="d-flex justify-content-center gap-2">
+    <div class="col-sm-2">
+      <div class="card text-center resaltar">
+        <div class="card-header">
+          <h4>Clientes</h4>
+        </div>
+        <div class="card-body">
+          <i class="fas fa-users fa-6x"></i><br />
+          5 registrados
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="card text-center resaltar">
+        <div class="card-header">
+          <h4>Items</h4>
+        </div>
+        <div class="card-body">
+          <i class="fas fa-pallet fa-6x"></i><br />
+          9 registrados
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="card text-center resaltar">
+        <div class="card-header">
+          <h4>Préstamos</h4>
+        </div>
+        <div class="card-body">
+          <i class="fas fa-file-invoice-dollar fa-6x"></i><br />
+          10 registrados
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="card text-center resaltar">
+        <div class="card-header">
+          <h4>Usuarios</h4>
+        </div>
+        <div class="card-body">
+          <i class="fas fa-user-secret fa-6x"></i><br />
+          15 registrados
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="card text-center resaltar">
+        <div class="card-header">
+          <h4>Empresa</h4>
+        </div>
+        <div class="card-body">
+          <i class="fas fa-store-alt fa-6x"></i><br />
+          1 registrada
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="col-md-5">
+    <div class="mt-4">
+      <form
+        action="javascript:cargarProducto();"
+        id="formaProdCrear"
+        class="validarFormulario"
+        novalidate
+      >
+        <div>
+          <div class="row">
+            <div class="mb-3">
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select"
+                  id="catePro"
+                  required
+                  style="background-image: none"
+                >
+                  <option value="" selected>seleccione categoria</option>
+                </select>
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Categoria
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="col-6 form-floating">
+                <select
+                  class="form-select"
+                  id="proveePro"
+                  required
+                  style="background-image: none"
+                >
+                  <option value="" selected>seleccione proveedor</option>
+                </select>
+                <label for="usu" style="color: #00000042; padding: 0.6rem"
+                  >Proveedor
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="col-6 form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="nom2"
+                required
+                placeholder="place"
+                style="background-image: none"
+              />
+              <label for="usu" style="color: #00000042; padding: 0.6rem"
+                >Nombre del producto
+              </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="col-6 form-floating">
+              <input
+                type="number"
+                class="form-control"
+                id="nom3"
+                required
+                placeholder="place"
+                style="background-image: none"
+              />
+              <label for="usu" style="color: #00000042; padding: 0.6rem"
+                >Cantidad</label
+              >
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="col form-floating">
+              <input
+                type="number"
+                class="form-control"
+                id="nom4"
+                required
+                placeholder="place"
+                style="background-image: none"
+              />
+              <label for="usu" style="color: #00000042; padding: 0.6rem"
+                >Precio</label
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Crear Producto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
